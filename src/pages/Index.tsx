@@ -5,6 +5,7 @@ import DetailingSection from "@/components/DetailingSection";
 import PaintCorrectionSection from "@/components/PaintCorrectionSection";
 import CeramicCoatingSection from "@/components/CeramicCoatingSection";
 import AdditionalServicesSection from "@/components/AdditionalServicesSection";
+import ReviewsSection from "@/components/ReviewsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
