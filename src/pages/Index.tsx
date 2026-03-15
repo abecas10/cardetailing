@@ -19,6 +19,7 @@ const Index = () => {
       <PaintCorrectionSection />
       <CeramicCoatingSection />
       <AdditionalServicesSection />
+      <ReviewsSection />
       <ContactSection />
       <Footer />
     </div>
