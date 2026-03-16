@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/revive-refine-logo.png";
 
 const navLinks = [
   { label: "Home", href: "#hero" },
@@ -17,13 +16,16 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
-      <div className="container mx-auto px-6 flex items-center justify-between h-20">
-        <a href="#hero" className="flex items-center" aria-label="Revive & Refine Auto Detailing home">
-          <img
-            src={logo}
-            alt="Revive & Refine Auto Detailing logo"
-            className="h-12 w-auto object-contain sm:h-14"
-          />
+      <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between h-20 gap-4">
+        <a href="#hero" className="min-w-0" aria-label="Revive & Refine Auto Detailing home">
+          <div className="flex flex-col leading-none">
+            <span className="truncate font-display text-base font-black tracking-[0.18em] text-foreground sm:text-lg lg:text-xl">
+              REVIVE <span className="text-primary">&</span> REFINE
+            </span>
+            <span className="truncate pt-1 text-[0.58rem] font-body font-semibold uppercase tracking-[0.36em] text-muted-foreground sm:text-[0.68rem] lg:text-[0.72rem]">
+              Auto Detailing
+            </span>
+          </div>
         </a>
 
         {/* Desktop */}
