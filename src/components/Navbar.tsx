@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/revive-refine-logo.png";
 
 const navLinks = [
   { label: "Home", href: "#hero" },
@@ -17,8 +18,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-6 flex items-center justify-between h-20">
-        <a href="#hero" className="font-display font-black text-2xl tracking-tight">
-          RR<span className="text-primary">.</span>DETAILING
+        <a href="#hero" className="flex items-center" aria-label="Revive & Refine Auto Detailing home">
+          <img
+            src={logo}
+            alt="Revive & Refine Auto Detailing logo"
+            className="h-12 w-auto object-contain sm:h-14"
+          />
         </a>
 
         {/* Desktop */}
