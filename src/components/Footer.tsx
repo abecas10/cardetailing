@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="py-8 bg-card border-t border-border">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="container mx-auto px-6 flex flex-col items-center justify-between gap-4 md:flex-row">
         <a href="#hero" className="text-center md:text-left" aria-label="Revive & Refine Auto Detailing home">
           <div className="flex flex-col leading-none">
             <span className="font-display text-lg font-black tracking-[0.14em] text-foreground sm:text-xl">
@@ -12,16 +12,12 @@ const Footer = () => {
             </span>
           </div>
         </a>
-        <p className="text-muted-foreground text-xs">
+        <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} RR Detailing Glasgow. All rights reserved.
         </p>
         <div className="flex gap-6">
-          <a href="#services" className="text-muted-foreground hover:text-primary text-xs transition-colors">Services</a>
-          <a href="#contact" className="text-muted-foreground hover:text-primary text-xs transition-colors">Contact</a>
-        </div>
-      </div>
-          <a href="#services" className="text-muted-foreground hover:text-primary text-xs transition-colors">Services</a>
-          <a href="#contact" className="text-muted-foreground hover:text-primary text-xs transition-colors">Contact</a>
+          <a href="#services" className="text-xs text-muted-foreground transition-colors hover:text-primary">Services</a>
+          <a href="#contact" className="text-xs text-muted-foreground transition-colors hover:text-primary">Contact</a>
         </div>
       </div>
     </footer>
