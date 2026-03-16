@@ -1,10 +1,16 @@
+import logo from "@/assets/revive-refine-logo.png";
+
 const Footer = () => {
   return (
     <footer className="py-8 bg-card border-t border-border">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="font-display font-black text-lg tracking-tight">
-          RR<span className="text-primary">.</span>DETAILING
-        </p>
+        <a href="#hero" className="flex items-center" aria-label="Revive & Refine Auto Detailing home">
+          <img
+            src={logo}
+            alt="Revive & Refine Auto Detailing logo"
+            className="h-14 w-auto object-contain"
+          />
+        </a>
         <p className="text-muted-foreground text-xs">
           © {new Date().getFullYear()} RR Detailing Glasgow. All rights reserved.
         </p>
