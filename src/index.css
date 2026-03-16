@@ -40,6 +40,10 @@
     --obsidian: 0 0% 4%;
     --charcoal: 0 0% 9%;
     --cool-grey: 217 10% 64%;
+    --google-blue: 217 89% 61%;
+    --google-red: 5 78% 57%;
+    --google-yellow: 45 100% 51%;
+    --google-green: 142 71% 45%;
 
     --sidebar-background: 0 0% 6%;
     --sidebar-foreground: 0 0% 100%;
@@ -79,11 +83,56 @@
   .border-glow {
     border-color: hsl(var(--lime) / 0.3);
   }
+
+  .google-blue {
+    fill: hsl(var(--google-blue));
+  }
+
+  .google-red {
+    fill: hsl(var(--google-red));
+  }
+
+  .google-yellow {
+    fill: hsl(var(--google-yellow));
+  }
+
+  .google-green {
+    fill: hsl(var(--google-green));
+  }
+
+  .review-marquee:hover .review-marquee__track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes review-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(-50% - 0.625rem), 0, 0);
+  }
+}
+
+.review-marquee__track {
+  animation: review-marquee 44s linear infinite;
+  will-change: transform;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .review-marquee__track {
+    animation: none;
+  }
 }
 
 /* Custom scrollbar */
