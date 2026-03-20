@@ -65,7 +65,7 @@ const DetailingSection = () => {
           title="COMPLETE CAR CARE"
           subtitle="From routine maintenance to the ultimate transformation, we have the right package for your vehicle."
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, i) => (
             <ServiceCard key={service.title} {...service} index={i} />
           ))}
