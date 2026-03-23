@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import QuoteDialog from "./QuoteDialog";
 
 const navLinks = [
   { label: "Home", href: "#hero" },
@@ -15,6 +16,7 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [quoteOpen, setQuoteOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
@@ -41,12 +43,12 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
+          <button
+            onClick={() => setQuoteOpen(true)}
             className="bg-primary text-primary-foreground font-display font-bold text-sm px-6 py-2.5 rounded-sm hover:bg-primary/90 transition-colors"
           >
             BOOK NOW
-          </a>
+          </button>
         </div>
 
         {/* Mobile toggle */}
@@ -79,17 +81,18 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#contact"
-                onClick={() => setIsOpen(false)}
+              <button
+                onClick={() => { setIsOpen(false); setQuoteOpen(true); }}
                 className="bg-primary text-primary-foreground font-display font-bold text-center px-6 py-3 rounded-sm mt-2"
               >
                 BOOK NOW
-              </a>
+              </button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      <QuoteDialog open={quoteOpen} onOpenChange={setQuoteOpen} />
     </nav>
   );
 };
