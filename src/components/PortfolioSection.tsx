@@ -42,7 +42,7 @@ const PortfolioSection = () => {
           subtitle="Real results on real cars. See the difference professional detailing makes."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {portfolioItems.map((item, i) => (
             <motion.div
               key={i}
@@ -51,7 +51,7 @@ const PortfolioSection = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`group relative overflow-hidden rounded-sm cursor-pointer ${
-                i === 0 ? "md:col-span-2 md:row-span-2" : ""
+                i === 0 ? "col-span-2 row-span-2" : ""
               }`}
               onClick={() => setSelectedItem(item)}
             >
@@ -62,18 +62,18 @@ const PortfolioSection = () => {
                   autoPlay
                   loop
                   playsInline
-                  className="w-full h-full object-cover min-h-[300px] md:min-h-full group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover max-h-[350px] group-hover:scale-105 transition-transform duration-700"
                 />
               ) : (
                 <img
                   src={item.src}
                   alt={item.alt}
                   loading="lazy"
-                  className="w-full h-full object-cover min-h-[250px] group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover h-[180px] md:h-[200px] group-hover:scale-105 transition-transform duration-700"
                 />
               )}
               <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-all duration-500 flex items-end">
-                <p className="p-4 text-foreground font-display text-sm font-bold tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="p-3 text-foreground font-display text-xs font-bold tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {item.alt}
                 </p>
               </div>
