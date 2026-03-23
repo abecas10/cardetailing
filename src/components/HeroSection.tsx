@@ -1,7 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { MapPin, Car } from "lucide-react";
 import heroImg from "@/assets/ultimate-detail.jpg";
+import QuoteDialog from "./QuoteDialog";
 
 const HeroSection = () => {
+  const [quoteOpen, setQuoteOpen] = useState(false);
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
@@ -22,6 +27,16 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
+          {/* Mobile Detailing badges */}
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-display font-bold tracking-widest text-primary">
+              <Car className="h-4 w-4" /> MOBILE AUTO DETAILING
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-display font-bold tracking-widest text-primary">
+              <MapPin className="h-4 w-4" /> WE COME TO YOU
+            </span>
+          </div>
+
           <p className="text-primary font-display font-bold text-sm tracking-[0.3em] uppercase mb-6">
             Glasgow's Premium Detailing Studio
           </p>
@@ -49,12 +64,12 @@ const HeroSection = () => {
           >
             EXPLORE SERVICES
           </a>
-          <a
-            href="#contact"
+          <button
+            onClick={() => setQuoteOpen(true)}
             className="border border-foreground/20 text-foreground font-display font-bold text-sm px-10 py-4 rounded-sm hover:border-primary/50 hover:text-primary transition-all duration-300 tracking-widest"
           >
             GET A QUOTE
-          </a>
+          </button>
         </motion.div>
 
         {/* Promo badge */}
@@ -85,6 +100,8 @@ const HeroSection = () => {
           <div className="w-1 h-2 bg-primary rounded-full" />
         </motion.div>
       </motion.div>
+
+      <QuoteDialog open={quoteOpen} onOpenChange={setQuoteOpen} />
     </section>
   );
 };
