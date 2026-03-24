@@ -9,6 +9,7 @@ import CeramicCoatingSection from "@/components/CeramicCoatingSection";
 import AdditionalServicesSection from "@/components/AdditionalServicesSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import ReviewsSection from "@/components/ReviewsSection";
+import BookingSection from "@/components/BookingSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -26,6 +27,7 @@ const Index = () => {
       <AdditionalServicesSection />
       <WhyChooseUsSection />
       <ReviewsSection />
+      <BookingSection />
       <ContactSection />
       <Footer />
     </div>

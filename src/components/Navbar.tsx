@@ -43,12 +43,14 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <button
-            onClick={() => setQuoteOpen(true)}
+          <a
+            href="https://calendar.app.google/e9cxrNKQW64LAgWJ6"
+            target="_blank"
+            rel="noreferrer"
             className="bg-primary text-primary-foreground font-display font-bold text-sm px-6 py-2.5 rounded-sm hover:bg-primary/90 transition-colors"
           >
             BOOK NOW
-          </button>
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -81,12 +83,15 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <button
-                onClick={() => { setIsOpen(false); setQuoteOpen(true); }}
+              <a
+                href="https://calendar.app.google/e9cxrNKQW64LAgWJ6"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setIsOpen(false)}
                 className="bg-primary text-primary-foreground font-display font-bold text-center px-6 py-3 rounded-sm mt-2"
               >
                 BOOK NOW
-              </button>
+              </a>
             </div>
           </motion.div>
         )}
