@@ -23,44 +23,45 @@ const WhyChooseUsSection = () => {
           title="Why Choose Us"
         />
 
-        <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reasons.map((reason, i) => {
-            const Icon = reason.icon;
-            return (
-              <motion.div
-                key={reason.label}
-                initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
-                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.55, delay: i * 0.09, ease: [0.16, 1, 0.3, 1] }}
-                className="group flex flex-col items-center text-center p-6 rounded-lg bg-card border border-border/50 hover:border-primary/30 transition-[border-color,box-shadow] duration-300 hover:shadow-[0_0_24px_-6px_hsl(var(--primary)/0.12)]"
-              >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors duration-300">
-                  <Icon className="w-5 h-5 text-primary" />
-                </div>
-                <span className="text-foreground font-display font-semibold text-sm tracking-wide">
-                  {reason.label}
-                </span>
-              </motion.div>
-            );
-          })}
-        </div>
+        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row gap-10 items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1">
+            {reasons.map((reason, i) => {
+              const Icon = reason.icon;
+              return (
+                <motion.div
+                  key={reason.label}
+                  initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.55, delay: i * 0.09, ease: [0.16, 1, 0.3, 1] }}
+                  className="group flex flex-col items-center text-center p-6 rounded-lg bg-card border border-border/50 hover:border-primary/30 transition-[border-color,box-shadow] duration-300 hover:shadow-[0_0_24px_-6px_hsl(var(--primary)/0.12)]"
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors duration-300">
+                    <Icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="text-foreground font-display font-semibold text-sm tracking-wide">
+                    {reason.label}
+                  </span>
+                </motion.div>
+              );
+            })}
+          </div>
 
-        {/* Van setup image */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-12 max-w-2xl mx-auto rounded-xl overflow-hidden border border-border/50 shadow-lg"
-        >
-          <img
-            src={vanSetup}
-            alt="Our fully equipped mobile detailing van with professional products and equipment"
-            className="w-full h-auto object-cover"
-            loading="lazy"
-          />
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full lg:w-72 shrink-0 rounded-xl overflow-hidden border border-border/50 shadow-lg"
+          >
+            <img
+              src={vanSetup}
+              alt="Our fully equipped mobile detailing van with professional products and equipment"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </motion.div>
+        </div>
       </div>
     </section>
   );
