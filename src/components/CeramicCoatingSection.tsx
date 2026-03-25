@@ -1,10 +1,19 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
+import ServiceDetailDialog from "./ServiceDetailDialog";
 import ceramic1Img from "@/assets/ceramic-1year.jpg";
 import ceramic3Img from "@/assets/ceramic-3year.jpg";
 import ceramic5Img from "@/assets/ceramic-5year.jpg";
 import ceramic8Img from "@/assets/ceramic-8year.jpg";
 import interiorCeramicImg from "@/assets/interior-ceramic.jpg";
+
+const ceramicFaqs = [
+  { q: "What does ceramic coating do?", a: "It protects your paint, adds gloss, and makes the car easier to clean." },
+  { q: "How long does it last?", a: "We offer coatings from 1 year up to 5+ years." },
+  { q: "Do I need paint correction before coating?", a: "Recommended for best results, but not mandatory." },
+  { q: "Is it better than wax?", a: "Yes — it is much more durable and long-lasting." },
+];
 
 const coatings = [
   {
@@ -42,6 +51,8 @@ const coatings = [
 ];
 
 const CeramicCoatingSection = () => {
+  const [selectedCoating, setSelectedCoating] = useState<number | null>(null);
+
   return (
     <section id="ceramic" className="py-24 bg-background">
       <div className="container mx-auto px-6">
@@ -59,7 +70,8 @@ const CeramicCoatingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group relative overflow-hidden rounded-sm bg-card border border-border hover:border-primary/30 transition-all duration-500"
+              className="group relative overflow-hidden rounded-sm bg-card border border-border hover:border-primary/30 transition-all duration-500 cursor-pointer"
+              onClick={() => setSelectedCoating(i)}
             >
               <div className="relative h-44 overflow-hidden">
                 <img
@@ -97,6 +109,18 @@ const CeramicCoatingSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {selectedCoating !== null && (
+          <ServiceDetailDialog
+            open={selectedCoating !== null}
+            onOpenChange={(open) => !open && setSelectedCoating(null)}
+            title={coatings[selectedCoating].title}
+            description={`${coatings[selectedCoating].chemical} — Durability: ${coatings[selectedCoating].durability}`}
+            price={coatings[selectedCoating].price}
+            features={coatings[selectedCoating].features}
+            faqs={ceramicFaqs}
+          />
+        )}
 
         {/* Interior Ceramic */}
         <motion.div
