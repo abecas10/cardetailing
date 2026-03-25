@@ -17,6 +17,11 @@ const services = [
       "Full interior vacuum, surfaces cleaned & dressed",
       "Glass cleaned, tyres dressed & scent applied",
     ],
+    faqs: [
+      { q: "Is this suitable for first-time customers?", a: "Yes — this is the perfect entry package for new clients." },
+      { q: "Does it include polishing?", a: "No machine polishing, but it includes a gloss-enhancing finish." },
+      { q: "How long does it take?", a: "Usually around 2–3 hours depending on the vehicle condition." },
+    ],
   },
   {
     title: "MAINTENANCE DETAIL",
@@ -28,6 +33,12 @@ const services = [
       "Wheel faces, barrels & tyres cleaned",
       "Ceramic sealant applied",
       "Full vacuum & interior surfaces cleaned",
+    ],
+    faqs: [
+      { q: "Who is this package for?", a: "This is for returning clients who have already had a Full or Ultimate Detail." },
+      { q: "How often should I book it?", a: "Every 4–8 weeks to maintain the finish and protection." },
+      { q: "Does it remove scratches?", a: "No — this is a maintenance clean, not a correction service." },
+      { q: "Will it keep my ceramic coating working properly?", a: "Yes — it helps maintain and extend the life of your coating." },
     ],
   },
   {
@@ -41,6 +52,11 @@ const services = [
       "Leather seats deep cleaned & conditioned",
       "Complementary air freshener",
     ],
+    faqs: [
+      { q: "What's the difference between this and a basic clean?", a: "This includes deep cleaning, decontamination, and protection — not just a wash." },
+      { q: "Will my car look like new?", a: "It will look significantly improved, but deeper defects require paint correction." },
+      { q: "How long does it take?", a: "Typically 4–6 hours." },
+    ],
   },
   {
     title: "ULTIMATE DETAIL",
@@ -52,6 +68,11 @@ const services = [
       "Engine bay detail",
       "Clay paintwork & gloss enhancement polish",
       "Roof liner & seat belt cleaned",
+    ],
+    faqs: [
+      { q: "Is this your best package?", a: "Yes — it's the most complete and detailed service we offer." },
+      { q: "Does it remove scratches?", a: "Light imperfections can be improved, but for full removal we recommend paint correction." },
+      { q: "Who is this for?", a: "Perfect for enthusiasts or anyone wanting near showroom condition." },
     ],
   },
 ];

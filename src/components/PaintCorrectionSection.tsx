@@ -16,6 +16,11 @@ const services = [
       "Paint decontamination: Iron, Tar & Clay bar",
       "4-6 weeks ceramic sealant applied",
     ],
+    faqs: [
+      { q: "What is gloss enhancement?", a: "A single-stage machine polish to improve shine and reduce light swirls." },
+      { q: "Does it remove all scratches?", a: "No — it improves the overall finish but doesn't remove deep scratches." },
+      { q: "How long does it last?", a: "Results last depending on maintenance and driving conditions." },
+    ],
   },
   {
     title: "1 STEP CORRECTION",
@@ -28,6 +33,12 @@ const services = [
       "Paintwork smooth like glass",
       "DA polishing machine applied",
     ],
+    faqs: [
+      { q: "What's the difference between 1 stage and 2 stage?", a: "1 stage improves gloss and removes light defects. 2 stage provides deeper correction and a higher-quality finish." },
+      { q: "Will it remove all scratches?", a: "Most defects can be removed or significantly reduced, depending on depth." },
+      { q: "Is it safe for my paint?", a: "Yes — we use professional techniques and measure paint thickness when needed." },
+      { q: "How long does it take?", a: "From 1 full day up to 2 days depending on the level." },
+    ],
   },
   {
     title: "2 STEP CORRECTION",
@@ -39,6 +50,12 @@ const services = [
       "90% Defects removal",
       "Heavy cutting + finishing polish",
       "Mirror-like appearance",
+    ],
+    faqs: [
+      { q: "What's the difference between 1 stage and 2 stage?", a: "1 stage improves gloss and removes light defects. 2 stage provides deeper correction and a higher-quality finish." },
+      { q: "Will it remove all scratches?", a: "Most defects can be removed or significantly reduced, depending on depth." },
+      { q: "Is it safe for my paint?", a: "Yes — we use professional techniques and measure paint thickness when needed." },
+      { q: "How long does it take?", a: "From 1 full day up to 2 days depending on the level." },
     ],
   },
 ];
