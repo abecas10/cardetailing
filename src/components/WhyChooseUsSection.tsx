@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
-import { Award, Sparkles, Eye, ThumbsUp, MapPin } from "lucide-react";
+import { Award, Sparkles, Eye, ThumbsUp, MapPin, Truck } from "lucide-react";
+import vanSetup from "@/assets/van-setup.jpg";
 
 const reasons = [
   { icon: Award, label: "Professional results every time" },
@@ -8,6 +9,7 @@ const reasons = [
   { icon: Eye, label: "Attention to detail" },
   { icon: ThumbsUp, label: "Customer satisfaction guaranteed" },
   { icon: MapPin, label: "Serving Glasgow & surrounding areas" },
+  { icon: Truck, label: "Fully equipped mobile detailing setup – we bring everything to you" },
 ];
 
 const WhyChooseUsSection = () => {
@@ -43,6 +45,22 @@ const WhyChooseUsSection = () => {
             );
           })}
         </div>
+
+        {/* Van setup image */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-12 max-w-2xl mx-auto rounded-xl overflow-hidden border border-border/50 shadow-lg"
+        >
+          <img
+            src={vanSetup}
+            alt="Our fully equipped mobile detailing van with professional products and equipment"
+            className="w-full h-auto object-cover"
+            loading="lazy"
+          />
+        </motion.div>
       </div>
     </section>
   );
