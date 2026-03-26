@@ -97,6 +97,10 @@ const portfolioItems = [
 
 const PortfolioSection = () => {
   const [selectedItem, setSelectedItem] = useState<typeof portfolioItems[0] | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  // Determine which items to show based on state
+  const displayedItems = showAll ? portfolioItems : portfolioItems.slice(0, 6);
 
   return (
     <section id="portfolio" className="py-24 bg-secondary">
@@ -108,14 +112,14 @@ const PortfolioSection = () => {
         />
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          {portfolioItems.map((item, i) => (
+          {displayedItems.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`group relative overflow-hidden rounded-sm cursor-pointer ${
+              transition={{ duration: 0.5, delay: (i % 6) * 0.1 }} // Reset delay for expanded items
+              className={`group relative overflow-hidden rounded-sm cursor-pointer aspect-square ${
                 i === 0 ? "col-span-2 row-span-2" : ""
               }`}
               onClick={() => setSelectedItem(item)}
@@ -127,14 +131,16 @@ const PortfolioSection = () => {
                   autoPlay
                   loop
                   playsInline
-                  className="w-full h-full object-cover max-h-[400px] group-hover:scale-105 transition-transform duration-700"
+                  // Switched to absolute inset-0 to perfectly fill the aspect-square wrapper
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               ) : (
                 <img
                   src={item.src}
                   alt={item.alt}
                   loading="lazy"
-                  className="w-full h-full object-cover h-[180px] md:h-[250px] group-hover:scale-105 transition-transform duration-700"
+                  // Switched to absolute inset-0 to perfectly fill the aspect-square wrapper
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               )}
               <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-all duration-500 flex items-end">
@@ -145,6 +151,18 @@ const PortfolioSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* See More / See Less Button */}
+        {portfolioItems.length > 6 && (
+          <div className="mt-12 flex justify-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-8 py-3 border border-foreground/20 hover:border-foreground/60 text-foreground font-display text-sm tracking-wider uppercase rounded-sm transition-colors duration-300"
+            >
+              {showAll ? "See Less" : "See More"}
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Lightbox */}
