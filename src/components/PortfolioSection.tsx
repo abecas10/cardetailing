@@ -127,14 +127,14 @@ const PortfolioSection = () => {
                   autoPlay
                   loop
                   playsInline
-                  className="w-full h-full object-cover max-h-[300px] group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover max-h-[400px] group-hover:scale-105 transition-transform duration-700"
                 />
               ) : (
                 <img
                   src={item.src}
                   alt={item.alt}
                   loading="lazy"
-                  className="w-full h-full object-cover h-[180px] md:h-[200px] group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover h-[180px] md:h-[250px] group-hover:scale-105 transition-transform duration-700"
                 />
               )}
               <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-all duration-500 flex items-end">
