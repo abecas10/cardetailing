@@ -9,6 +9,11 @@ const portfolioItems = [
     alt: "Detailing process in action",
   },
   {
+    type: "video" as const,
+    src: "/portfolio/video1.mp4",
+    alt: "",
+  },
+  {
     type: "image" as const,
     src: "/portfolio/engine.png",
     alt: "AMG Engine Bay — Before & After",
@@ -27,6 +32,66 @@ const portfolioItems = [
     type: "image" as const,
     src: "/portfolio/backseat.png",
     alt: "Back seat area cleaning — Before & After",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img1.png",
+    alt: "",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img2.png",
+    alt: "",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img3.png",
+    alt: "",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img4.png",
+    alt: "",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img5.png",
+    alt: "",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img6.png",
+    alt: "",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img7.png",
+    alt: "",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img8.png",
+    alt: "",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img9.png",
+    alt: "",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img10.png",
+    alt: "",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img11.png",
+    alt: "",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img12.png",
+    alt: "",
   },
 ];
 

@@ -9,7 +9,7 @@ const services = [
     title: "GLOSS ENHANCEMENT",
     description: "A gloss enhancement polish provides a brilliant, high-gloss finish that revitalises surfaces, enhancing their natural shine while offering protection against wear and tear.",
     image: glossImg,
-    price: "£160",
+    price: "£120",
     features: [
       "Ideally suited to those working within budget",
       "20% Defects removal",
@@ -26,7 +26,7 @@ const services = [
     title: "1 STEP CORRECTION",
     description: "Efficiently removes minor scratches, swirls, and imperfections from your vehicle's paintwork, restoring clarity and shine with a smooth, glossy finish.",
     image: oneStepImg,
-    price: "£250",
+    price: "£200",
     features: [
       "Ideally suited to relatively new used cars",
       "60%+ Defects removal",
@@ -44,7 +44,7 @@ const services = [
     title: "2 STEP CORRECTION",
     description: "A meticulous process using cutting compound to remove imperfections, then polishing compound to refine for a flawless, mirror-like appearance.",
     image: twoStepImg,
-    price: "£350",
+    price: "£280",
     features: [
       "Suited for dull paintwork & medium scratches",
       "90% Defects removal",

@@ -17,17 +17,9 @@ const ceramicFaqs = [
 
 const coatings = [
   {
-    title: "1 YEAR COATING",
-    chemical: "CarPro Lite",
-    price: "£140",
-    durability: "Up to 1+ Year",
-    image: ceramic1Img,
-    features: ["High gloss", "\"Self cleaning\" properties", "UV & acid rain protection"],
-  },
-  {
     title: "2/3 YEAR COATING",
     chemical: "CarPro CQ UK 3.0",
-    price: "£200",
+    price: "£150",
     durability: "Up to 3+ Years",
     image: ceramic3Img,
     features: ["Deep gloss", "Highly smooth feeling", "\"Self cleaning\" properties"],
@@ -35,7 +27,7 @@ const coatings = [
   {
     title: "5 YEAR COATING",
     chemical: "DIY DETAIL 5 YEAR COATING",
-    price: "£250",
+    price: "£200",
     durability: "Up to 5+ Years",
     image: ceramic5Img,
     features: ["Crystal clear finish", "\"Self cleaning\" properties", "Scratch & swirl resistant"],
@@ -43,7 +35,7 @@ const coatings = [
   {
     title: "7/8 YEAR COATING",
     chemical: "DIY DETAIL 8 YEAR COATING",
-    price: "£350",
+    price: "£260",
     durability: "Up to 8+ Years",
     image: ceramic8Img,
     features: ["Crystal clear finish", "Maximum durability", "Ultimate protection"],

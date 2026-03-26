@@ -35,7 +35,7 @@ const services = [
     title: "HEADLIGHT TINT / PPF",
     description: "We offer four different shades of light tint, allowing you to customize your headlights and taillights to achieve the perfect look for your car. All shades are available at the same price—you can pick your preferred shade on the day of your appointment.",
     image: headlightTintImg,
-    price: "[unknown information]",
+    price: "£60",
   },
 ];
 

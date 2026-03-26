@@ -38,7 +38,7 @@ const HeroSection = () => {
           </div>
 
           <p className="text-primary font-display font-bold text-sm tracking-[0.3em] uppercase mb-6">
-            Glasgow's Premium Detailing Studio
+            Glasgow premium mobile car detailing
           </p>
           <h1 className="font-display font-black text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-6 tracking-tight">
             PERFECTION
@@ -48,7 +48,7 @@ const HeroSection = () => {
             <span className="text-gradient-lime">DETAIL</span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto mb-10 font-body">
-            Professional car detailing, paint correction & ceramic coating services.
+            Premium mobile car detailing, paint correction & ceramic coating services.
           </p>
         </motion.div>
 
@@ -80,7 +80,7 @@ const HeroSection = () => {
           className="mt-12 inline-block border border-primary/30 bg-primary/5 px-6 py-3 rounded-sm"
         >
           <p className="text-primary font-display font-bold text-sm tracking-wide">
-            🎉 15% OFF YOUR FIRST BOOKING
+            🎉 10% OFF YOUR FIRST BOOKING
           </p>
         </motion.div>
       </div>
