@@ -54,7 +54,8 @@ const CeramicCoatingSection = () => {
           subtitle="A permanent layer of protection with different variations of durability. Preparation Required: Paint must be clean and swirl-free (we recommend paint correction before coating)."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {/* CHANGED: Switched from grid to flex with justify-center */}
+        <div className="flex flex-wrap justify-center gap-6 mb-12">
           {coatings.map((coating, i) => (
             <motion.div
               key={coating.title}
@@ -62,7 +63,8 @@ const CeramicCoatingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group relative overflow-hidden rounded-sm bg-card border border-border hover:border-primary/30 transition-all duration-500 cursor-pointer"
+              // Added w-full and md:max-w-[320px] to ensure they don't grow too large while centered
+              className="group relative overflow-hidden rounded-sm bg-card border border-border hover:border-primary/30 transition-all duration-500 cursor-pointer w-full md:max-w-[320px]"
               onClick={() => setSelectedCoating(i)}
             >
               <div className="relative h-44 overflow-hidden">
