@@ -6,7 +6,7 @@ const portfolioItems = [
   {
     type: "video" as const,
     src: "/portfolio/video.mp4",
-    alt: "Detailing process in action",
+    alt: "",
   },
   {
     type: "video" as const,
@@ -16,71 +16,71 @@ const portfolioItems = [
   {
     type: "image" as const,
     src: "/portfolio/engine.png",
-    alt: "AMG Engine Bay — Before & After",
+    alt: "",
   },
   {
     type: "image" as const,
     src: "/portfolio/boot.png",
-    alt: "Boot area deep clean — Before & After",
+    alt: "",
   },
   {
     type: "image" as const,
     src: "/portfolio/floor.png",
-    alt: "Interior floor detailing — Before & After",
+    alt: "",
   },
   {
     type: "image" as const,
     src: "/portfolio/backseat.png",
-    alt: "Back seat area cleaning — Before & After",
-  },
-  {
-    type: "image" as const,
-    src: "/portfolio/img1.png",
     alt: "",
   },
   {
     type: "image" as const,
-    src: "/portfolio/img2.png",
+    src: "/portfolio/img1.jpeg",
     alt: "",
   },
   {
     type: "image" as const,
-    src: "/portfolio/img3.png",
+    src: "/portfolio/img2.jpeg",
     alt: "",
   },
   {
     type: "image" as const,
-    src: "/portfolio/img4.png",
+    src: "/portfolio/img3.jpeg",
     alt: "",
   },
   {
     type: "image" as const,
-    src: "/portfolio/img5.png",
+    src: "/portfolio/img4.jpeg",
     alt: "",
   },
   {
     type: "image" as const,
-    src: "/portfolio/img6.png",
+    src: "/portfolio/img5.jpeg",
     alt: "",
   },
   {
     type: "image" as const,
-    src: "/portfolio/img7.png",
+    src: "/portfolio/img6.jpeg",
     alt: "",
   },
   {
     type: "image" as const,
-    src: "/portfolio/img8.png",
+    src: "/portfolio/img7.jpeg",
     alt: "",
   },
   {
     type: "image" as const,
-    src: "/portfolio/img9.png",
+    src: "/portfolio/img8.jpeg",
     alt: "",
   },
   {
     type: "image" as const,
-    src: "/portfolio/img10.png",
+    src: "/portfolio/img9.jpeg",
+    alt: "",
+  },
+  {
+    type: "image" as const,
+    src: "/portfolio/img10.jpeg",
     alt: "",
   },
   {
