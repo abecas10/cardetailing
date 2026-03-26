@@ -99,26 +99,28 @@ const PortfolioSection = () => {
   const [selectedItem, setSelectedItem] = useState<typeof portfolioItems[0] | null>(null);
   const [showAll, setShowAll] = useState(false);
 
-  // Determine which items to show based on state
+  // Determine which items to show based on state (6 items initially)
   const displayedItems = showAll ? portfolioItems : portfolioItems.slice(0, 6);
 
   return (
     <section id="portfolio" className="py-24 bg-secondary">
-      <div className="container mx-auto px-6">
+      {/* Changed to max-w-7xl to prevent the grid from stretching too wide on massive monitors */}
+      <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           label="Our Work"
           title="PORTFOLIO"
           subtitle="Real results on real cars. See the difference professional detailing makes."
         />
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        {/* Increased columns to lg:grid-cols-5 and gap to gap-4 to naturally shrink the items */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {displayedItems.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: (i % 6) * 0.1 }} // Reset delay for expanded items
+              transition={{ duration: 0.5, delay: (i % 6) * 0.1 }}
               className={`group relative overflow-hidden rounded-sm cursor-pointer aspect-square ${
                 i === 0 ? "col-span-2 row-span-2" : ""
               }`}
@@ -131,7 +133,6 @@ const PortfolioSection = () => {
                   autoPlay
                   loop
                   playsInline
-                  // Switched to absolute inset-0 to perfectly fill the aspect-square wrapper
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               ) : (
@@ -139,13 +140,12 @@ const PortfolioSection = () => {
                   src={item.src}
                   alt={item.alt}
                   loading="lazy"
-                  // Switched to absolute inset-0 to perfectly fill the aspect-square wrapper
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               )}
               <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-all duration-500 flex items-end">
                 <p className="p-3 text-foreground font-display text-xs font-bold tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {item.alt}
+                  {item.alt || "Portfolio Item"}
                 </p>
               </div>
             </motion.div>
