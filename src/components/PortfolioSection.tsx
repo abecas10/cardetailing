@@ -60,7 +60,7 @@ const portfolioItems = [
   },
   {
     type: "image" as const,
-    src: "/portfolio/img6.jpeg",
+    src: "/portfolio/img6.png",
     alt: "",
   },
   {
@@ -127,7 +127,7 @@ const PortfolioSection = () => {
                   autoPlay
                   loop
                   playsInline
-                  className="w-full h-full object-cover max-h-[350px] group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover max-h-[300px] group-hover:scale-105 transition-transform duration-700"
                 />
               ) : (
                 <img
