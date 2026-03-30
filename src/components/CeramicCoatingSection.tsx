@@ -20,9 +20,10 @@ const coatings = [
     title: "2/3 YEAR COATING",
     chemical: "CarPro CQ UK 3.0",
     price: "£150",
+    description: "A four-year ceramic coating delivers extended protection and a lasting glossy finish, shielding surfaces from dirt, water, and environmental contaminants while preserving the vehicle's shine and ease of maintenance for up to 4 years.",
     durability: "Up to 3+ Years",
     image: ceramic3Img,
-    features: ["Deep gloss", "Highly smooth feeling", "\"Self cleaning\" properties"],
+    features: ["Protects from various environmental factors, such as UV rays, acid rain, & bird droppings", "Excellent resistant to scratches and swirl marks", "Prevent fading and oxidation over time", "Deep gloss", "Highly smooth feeling", "\"Self cleaning\" properties", "Durability: Up to 3+ Years (With good maintenance)"],
   },
   {
     title: "5 YEAR COATING",
@@ -51,7 +52,7 @@ const CeramicCoatingSection = () => {
         <SectionHeading
           label="Ceramic Coating Protection"
           title="PERMANENT PROTECTION"
-          subtitle="A permanent layer of protection with different variations of durability. Preparation Required: Paint must be clean and swirl-free (we recommend paint correction before coating)."
+          subtitle="A permanent layer of protection with different variations of durability."
         />
 
         {/* CHANGED: Switched from grid to flex with justify-center */}
@@ -91,6 +92,7 @@ const CeramicCoatingSection = () => {
                 <p className="text-muted-foreground text-xs mb-3">
                   Durability: {coating.durability}
                 </p>
+                <p>{coating.description}</p>
                 <ul className="space-y-1">
                   {coating.features.map((f, j) => (
                     <li key={j} className="flex items-start gap-2 text-[11px] text-muted-foreground">
