@@ -30,8 +30,9 @@ const coatings = [
     chemical: "DIY DETAIL 5 YEAR COATING",
     price: "£200",
     durability: "Up to 5+ Years",
+    description: "A seven-year ceramic coating offers long-lasting protection and a deep, glossy finish, shielding surfaces from environmental damage, UV rays, and contaminants, while maintaining a like-new appearance for up to seven years.",
     image: ceramic5Img,
-    features: ["Crystal clear finish", "\"Self cleaning\" properties", "Scratch & swirl resistant"],
+    features: [],
   },
   {
     title: "7/8 YEAR COATING",
@@ -113,7 +114,7 @@ const CeramicCoatingSection = () => {
             open={selectedCoating !== null}
             onOpenChange={(open) => !open && setSelectedCoating(null)}
             title={coatings[selectedCoating].title}
-            description={`${coatings[selectedCoating].chemical} — Durability: ${coatings[selectedCoating].durability}`}
+            description={`${coatings[selectedCoating].chemical} — Durability: ${coatings[selectedCoating].durability} \n\n ${coatings[selectedCoating].description}`}
             price={coatings[selectedCoating].price}
             features={coatings[selectedCoating].features}
             faqs={ceramicFaqs}
