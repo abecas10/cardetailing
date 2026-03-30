@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import PortfolioSection from "@/components/PortfolioSection";
+import FloatingQuoteButton from "@/components/FloatingQuoteButton";
 import AboutSection from "@/components/AboutSection";
 import ServicesOverview from "@/components/ServicesOverview";
 import DetailingSection from "@/components/DetailingSection";
