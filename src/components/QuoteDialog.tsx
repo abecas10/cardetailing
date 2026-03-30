@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -7,7 +8,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { Mail } from "lucide-react";
+import { Mail, Check, Copy } from "lucide-react";
 
 const PHONE = "+447916308660";
 const EMAIL = "rrdetailingglasgow@gmail.com";
@@ -27,8 +28,20 @@ interface QuoteDialogProps {
 }
 
 const QuoteDialog = ({ open, onOpenChange }: QuoteDialogProps) => {
+  const [copied, setCopied] = useState(false);
+
   const whatsappUrl = `https://wa.me/${PHONE.replace("+", "")}?text=${encodeURIComponent(MESSAGE)}`;
   const emailUrl = `mailto:${EMAIL}?subject=${encodeURIComponent("Quote Request")}&body=${encodeURIComponent(MESSAGE)}`;
+
+  const handleEmailClick = () => {
+    // 1. Try to open the default mail app
+    window.location.href = emailUrl;
+
+    // 2. Copy to clipboard as a fallback for users without a default mail app
+    navigator.clipboard.writeText(EMAIL);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 3000);
+  };
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -52,13 +65,23 @@ const QuoteDialog = ({ open, onOpenChange }: QuoteDialogProps) => {
             <WhatsAppIcon className="h-6 w-6" />
             WHATSAPP
           </a>
-          <a
-            href={emailUrl}
-            className="flex items-center justify-center gap-3 rounded-xl border border-border bg-background px-6 py-4 font-display text-sm font-bold tracking-widest text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+
+          <button
+            onClick={handleEmailClick}
+            className="flex items-center justify-center gap-3 rounded-xl border border-border bg-background px-6 py-4 font-display text-sm font-bold tracking-widest text-foreground transition-all hover:border-primary/50 hover:text-primary active:scale-95"
           >
-            <Mail className="h-6 w-6" />
-            EMAIL
-          </a>
+            {copied ? (
+              <>
+                <Check className="h-6 w-6 text-green-500" />
+                COPIED!
+              </>
+            ) : (
+              <>
+                <Mail className="h-6 w-6" />
+                EMAIL
+              </>
+            )}
+          </button>
         </div>
       </DialogContent>
     </Dialog>
