@@ -52,6 +52,8 @@ const QuoteDialog = ({ open, onOpenChange }: QuoteDialogProps) => {
           </a>
           <a
             href={emailUrl}
+            target="_blank"
+            rel="noreferrer"
             className="flex items-center justify-center gap-3 rounded-xl border border-border bg-background px-6 py-4 font-display text-sm font-bold tracking-widest text-foreground transition-colors hover:border-primary/50 hover:text-primary"
           >
             <Mail className="h-6 w-6" />

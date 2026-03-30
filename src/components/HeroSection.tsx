@@ -80,7 +80,7 @@ const HeroSection = () => {
           className="mt-12 inline-block border border-primary/30 bg-primary/5 px-6 py-3 rounded-sm"
         >
           <p className="text-primary font-display font-bold text-sm tracking-wide">
-            🎉 30% OFF YOUR FIRST BOOKING
+            🎉 Limited Time Offer — 30% Off
           </p>
         </motion.div>
       </div>

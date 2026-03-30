@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 import ServiceDetailDialog from "./ServiceDetailDialog";
 import ceramic1Img from "@/assets/ceramic-1year.jpg";
 import ceramic3Img from "@/assets/ceramic-3year.jpg";
-import ceramic5Img from "@/assets/ceramic-5year.jpg";
+import ceramic5Img from "@/assets/ceramic-5year.png";
 import ceramic8Img from "@/assets/ceramic-8year.jpg";
 import interiorCeramicImg from "@/assets/interior-ceramic.jpg";
 
