@@ -1,4 +1,4 @@
-mport { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import engineBayImg from "@/assets/engine-bay.jpg";
 import headlightImg from "@/assets/headlight-restoration.jpg";
