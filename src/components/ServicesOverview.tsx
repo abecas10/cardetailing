@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import maintenanceImg from "@/assets/maintenance-detail.jpg";
 import paintImg from "@/assets/paint-corrections.jpg";
 import ceramicImg from "@/assets/ceramic-coating.jpg";
 import engineImg from "@/assets/engine-bay.jpg";
+import QuoteDialog from "./QuoteDialog";
 
 const categories = [
   {
@@ -32,6 +34,8 @@ const categories = [
 ];
 
 const ServicesOverview = () => {
+  const [quoteOpen, setQuoteOpen] = useState(false);
+
   return (
     <section id="services" className="py-24 bg-secondary">
       <div className="container mx-auto px-6">
@@ -48,6 +52,9 @@ const ServicesOverview = () => {
           <h2 className="font-display font-black text-3xl md:text-5xl tracking-tight mb-4">
             OUR SERVICES
           </h2>
+          <p className="text-muted-foreground text-sm max-w-xl mx-auto">
+            Prices vary depending on the vehicle size and condition. Contact us for an accurate quote for your car.
+          </p>
           <div className="mt-6 mx-auto w-16 h-0.5 bg-primary/50" />
         </motion.div>
 
@@ -83,7 +90,27 @@ const ServicesOverview = () => {
             </motion.a>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-12 text-center"
+        >
+          <p className="text-muted-foreground text-sm mb-4">
+            Not sure what service is right for you?
+          </p>
+          <button
+            onClick={() => setQuoteOpen(true)}
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-display font-bold text-xs tracking-widest px-8 py-3 rounded-sm hover:bg-primary/90 transition-colors"
+          >
+            GET A QUICK QUOTE
+          </button>
+        </motion.div>
       </div>
+
+      <QuoteDialog open={quoteOpen} onOpenChange={setQuoteOpen} />
     </section>
   );
 };
