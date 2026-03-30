@@ -1,5 +1,13 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import engineBayImg from "@/assets/engine-bay.jpg";
 import headlightImg from "@/assets/headlight-restoration.jpg";
 import dechromeImg from "@/assets/dechrome.jpg";
@@ -40,6 +48,8 @@ const services = [
 ];
 
 const AdditionalServicesSection = () => {
+  const [selected, setSelected] = useState<number | null>(null);
+
   return (
     <section id="additional" className="py-24 bg-secondary">
       <div className="container mx-auto px-6">
@@ -49,7 +59,6 @@ const AdditionalServicesSection = () => {
           subtitle="Complete your vehicle's transformation with our range of additional services."
         />
 
-        {/* Bento grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, i) => (
             <motion.div
@@ -58,9 +67,10 @@ const AdditionalServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className={`group relative overflow-hidden rounded-sm ${
+              className={`group relative overflow-hidden rounded-sm cursor-pointer ${
                 i === 0 ? "md:col-span-2 lg:col-span-1" : ""
               }`}
+              onClick={() => setSelected(i)}
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -86,6 +96,33 @@ const AdditionalServicesSection = () => {
           ))}
         </div>
       </div>
+
+      {selected !== null && (
+        <Dialog open={true} onOpenChange={() => setSelected(null)}>
+          <DialogContent className="max-w-lg max-h-[85vh] overflow-y-auto bg-card border-border">
+            <DialogHeader>
+              <DialogTitle className="font-display font-black text-xl tracking-tight">
+                {services[selected].title}
+              </DialogTitle>
+              <DialogDescription className="text-muted-foreground text-sm leading-relaxed">
+                {services[selected].description}
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4">
+              <div className="rounded-sm overflow-hidden">
+                <img
+                  src={services[selected].image}
+                  alt={services[selected].title}
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <div className="inline-block bg-primary text-primary-foreground font-display font-bold text-xs px-3 py-1.5 rounded-sm">
+                FROM {services[selected].price}
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
+      )}
     </section>
   );
 };
