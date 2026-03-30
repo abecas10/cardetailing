@@ -92,7 +92,9 @@ const CeramicCoatingSection = () => {
                 <p className="text-muted-foreground text-xs mb-3">
                   Durability: {coating.durability}
                 </p>
-                <p>{coating.description}</p>
+                <p className="text-muted-foreground text-xs mb-3">
+                  {coating.description}
+                </p>
                 <ul className="space-y-1">
                   {coating.features.map((f, j) => (
                     <li key={j} className="flex items-start gap-2 text-[11px] text-muted-foreground">
