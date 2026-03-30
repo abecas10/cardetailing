@@ -8,14 +8,26 @@ import ultimateDetailImg from "@/assets/ultimate-detail.jpg";
 const services = [
   {
     title: "SIGNATURE DETAIL",
-    description: "A thorough clean & protection package for first-time clients. Covers every aspect of your vehicle's exterior and interior to deliver a showroom-ready finish.",
+    description: "A thorough clean & protection package for first-time clients.",
     image: signatureImg,
     price: "£70",
     features: [
-      "Pre-wash, safe hand wash & ceramic sealant",
-      "Wheels, barrels, tyres & inner arches cleaned",
-      "Full interior vacuum, surfaces cleaned & dressed",
-      "Glass cleaned, tyres dressed & scent applied",
+      "Exterior:",
+      "Pre-Wash",
+      "Wheel faces, barrels and tyres cleaned",
+      "Inner arches scrubbed and flushed",
+      "Safe hand wash",
+      "Door shuts cleaned and flushed",
+      "Ceramic sealant applied",
+      "Soft towel dried",
+      "Glass cleaned",
+      "Tyres dressed",
+      "Interior:",
+      "Full vacuum of interior and boot area",
+      "All interior surfaces cleaned and dressed",
+      "Interior glass cleaned",
+      "Scent applied",
+      "Complementary air freshener"
     ],
     faqs: [
       { q: "Is this suitable for first-time customers?", a: "Yes — this is the perfect entry package for new clients." },

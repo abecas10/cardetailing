@@ -27,13 +27,13 @@ const services = [
   },
   {
     title: "BRAKE CALIPER RESPRAY",
-    description: "Give your car a bold, sporty, and premium look with our Brake Caliper Painting service. Whether you're looking to make a statement with bright red calipers or prefer a more subtle, elegant finish, custom-painted calipers instantly enhance the appearance of your vehicle.",
+    description: "Give your car a bold, sporty, and premium look with our Brake Caliper Painting service. Whether you’re looking to make a statement with bright red calipers or prefer a more subtle, elegant finish, custom-painted calipers instantly enhance the appearance of your vehicle.",
     image: calipersImg,
     price: "£140",
   },
   {
-    title: "HEADLIGHT TINT / PPF",
-    description: "We offer four different shades of light tint, allowing you to customize your headlights and taillights to achieve the perfect look for your car. All shades are available at the same price—you can pick your preferred shade on the day of your appointment.",
+    title: "HEADLIGHT TINT / PPF", 
+    description: "We offer four different shades of light tint, allowing you to customize your headlights and taillights to achieve the perfect look for your car. Whether you prefer a light smoke for a subtle touch or a darker shade for a bold, aggressive appearance, we have the right option for you. All shades are available at the same price, so you don’t need to decide in advance—you can pick your preferred shade on the day of your appointment.",
     image: headlightTintImg,
     price: "£60",
   },

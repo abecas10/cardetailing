@@ -32,15 +32,16 @@ const coatings = [
     durability: "Up to 5+ Years",
     description: "A seven-year ceramic coating offers long-lasting protection and a deep, glossy finish, shielding surfaces from environmental damage, UV rays, and contaminants, while maintaining a like-new appearance for up to seven years.",
     image: ceramic5Img,
-    features: [],
+    features: ["Protects from various environmental factors, such as UV rays, acid rain, & bird droppings", "Excellent resistant to scratches and swirl marks", "Crystal clear finish", "Self cleaning properties", "Durability: Up to 5+ Years (With good maintenance)"],
   },
   {
     title: "7/8 YEAR COATING",
     chemical: "DIY DETAIL 8 YEAR COATING",
     price: "£260",
     durability: "Up to 8+ Years",
+    description: "A seven-year ceramic coating offers long-lasting protection and a deep, glossy finish, shielding surfaces from environmental damage, UV rays, and contaminants, while maintaining a like-new appearance for up to seven years.",
     image: ceramic8Img,
-    features: ["Crystal clear finish", "Maximum durability", "Ultimate protection"],
+    features: ["Protects from various environmental factors, such as UV rays, acid rain, & bird droppings", "Excellent resistant to scratches and swirl marks", "Prevent fading and oxidation over time", "Crystal clear finish", "Self cleaning properties", "Durability: Up to 8+ Years (With good maintenance)"],
   },
 ];
 
@@ -146,7 +147,7 @@ const CeramicCoatingSection = () => {
               INTERIOR CERAMIC COATING
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Enhance and protect your vehicle's interior with our premium ceramic coating. This advanced protection forms an invisible barrier on leather, plastics, and fabrics, guarding against stains, UV damage, and daily wear while preserving the original look and feel of the materials.
+              Enhance and protect your vehicle's interior with our premium ceramic coating. This advanced protection forms an invisible barrier on leather, plastics, and fabrics, guarding against stains, UV damage, and daily wear while preserving the original look and feel of the materials. The result is a cleaner, longer-lasting interior that maintains its luxury appearance with minimal maintenance.
             </p>
             <a
               href="#contact"
