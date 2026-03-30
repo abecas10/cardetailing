@@ -114,7 +114,7 @@ const CeramicCoatingSection = () => {
             open={selectedCoating !== null}
             onOpenChange={(open) => !open && setSelectedCoating(null)}
             title={coatings[selectedCoating].title}
-            description={`${coatings[selectedCoating].chemical} — Durability: ${coatings[selectedCoating].durability} \n\n ${coatings[selectedCoating].description}`}
+            description={`${coatings[selectedCoating].chemical} — Durability: ${coatings[selectedCoating].durability} | ${coatings[selectedCoating].description}`}
             price={coatings[selectedCoating].price}
             features={coatings[selectedCoating].features}
             faqs={ceramicFaqs}
