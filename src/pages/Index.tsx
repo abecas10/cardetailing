@@ -33,6 +33,7 @@ const Index = () => {
       <BookingSection />
       <ContactSection />
       <Footer />
+      <FloatingQuoteButton />
     </div>
   );
 };
