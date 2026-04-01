@@ -47,14 +47,29 @@ const ServiceCard = ({ title, description, image, price, features, faqs, index }
           <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3">
             {description}
           </p>
+          
           {features && features.length > 0 && (
             <ul className="space-y-1.5">
-              {features.slice(0, 4).map((feature, i) => (
-                <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
-                  <span className="text-primary mt-0.5 flex-shrink-0">▸</span>
-                  {feature}
-                </li>
-              ))}
+              {/* Increased slice slightly to show enough info with the new headers */}
+              {features.slice(0, 6).map((feature, i) => {
+                const isHeader = feature.endsWith(":");
+                
+                return (
+                  <li 
+                    key={i} 
+                    className={`flex items-start gap-2 text-xs ${
+                      isHeader 
+                        ? "text-primary font-bold uppercase tracking-widest mt-4 mb-1 first:mt-0" 
+                        : "text-muted-foreground"
+                    }`}
+                  >
+                    {!isHeader && (
+                      <span className="text-primary mt-0.5 flex-shrink-0">▸</span>
+                    )}
+                    {feature}
+                  </li>
+                );
+              })}
             </ul>
           )}
         </div>
