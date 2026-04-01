@@ -55,17 +55,30 @@ const ServiceDetailDialog = ({
 
           {features && features.length > 0 && (
             <ul className="space-y-2">
-              {features.map((f, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <span className="text-primary mt-0.5 flex-shrink-0">▸</span>
-                  {f}
-                </li>
-              ))}
+              {features.map((f, i) => {
+                const isHeader = f.endsWith(":");
+
+                return (
+                  <li
+                    key={i}
+                    className={`flex items-start gap-2 text-sm ${
+                      isHeader
+                        ? "text-primary font-bold uppercase tracking-widest mt-6 mb-2 first:mt-0"
+                        : "text-muted-foreground"
+                    }`}
+                  >
+                    {!isHeader && (
+                      <span className="text-primary mt-0.5 flex-shrink-0">▸</span>
+                    )}
+                    {f}
+                  </li>
+                );
+              })}
             </ul>
           )}
 
           {faqs && faqs.length > 0 && (
-            <div>
+            <div className="pt-4">
               <p className="text-primary font-display font-bold text-xs tracking-[0.2em] uppercase mb-3">
                 FAQ
               </p>
@@ -76,7 +89,7 @@ const ServiceDetailDialog = ({
                     value={`sfaq-${i}`}
                     className="border border-border rounded-sm bg-secondary/50 px-4"
                   >
-                    <AccordionTrigger className="font-display font-bold text-xs tracking-tight hover:no-underline hover:text-primary transition-colors py-3">
+                    <AccordionTrigger className="font-display font-bold text-xs tracking-tight hover:no-underline hover:text-primary transition-colors py-3 text-left">
                       {faq.q}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground text-sm leading-relaxed">
